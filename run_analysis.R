@@ -48,4 +48,4 @@ ext_melt <- melt(extracted_data, id=c("subjects", "activity"), measure.vars=as.c
 #create new data frame using dcast providing mean of all measurement variables
 #against id variables
 new_df <- dcast(ext_melt, subjects + activity ~ variable, mean)
-write.table(new_df, "new_data_frame.txt")
+write.table(new_df, "new_data_frame.txt", row.names = FALSE)
